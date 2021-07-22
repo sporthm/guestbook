@@ -1,0 +1,15 @@
+{
+  "targets": {
+    "guestbook-5af93": {
+      "hosting": {
+        "guestbook": [
+          "guestbook-5af93"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "guestbook": "guestbook-5af93",
+    "default": "guestbook-5af93"
+  }
+}

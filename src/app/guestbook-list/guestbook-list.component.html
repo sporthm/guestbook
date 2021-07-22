@@ -1,0 +1,23 @@
+<div class="ui segment" *ngFor="let item of items | async">
+  <div class="ui feed">
+    <div class="event">
+      <div class="content">
+        <div class="summary">
+          <a>{{item.name}}</a> machte
+          folgenden Gästebucheintrag:
+        </div>
+        <div class="metadata">
+          <span class="date">
+            <i class="time icon"></i>
+            {{ item.created_at.toDate() | date:'dd.MM.yy'}} um
+            {{ item.created_at.toDate() | date:'H:mm'}} Uhr
+          </span>
+        </div>
+
+        <div class="extra text">
+          {{ item.content}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

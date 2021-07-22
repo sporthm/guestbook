@@ -1,0 +1,25 @@
+<form class="ui form" [formGroup]="createForm" (ngSubmit)="submitForm()">
+  <div class="field">
+    <label>Neuer Gästebucheintrag</label>
+    <textarea autocomplete="off" autofocus rows="5" formControlName="inhalt"></textarea>
+  </div>
+  <div class="two fields">
+    <div class="field">
+      <label>Name</label>
+        <div class="ui left icon input">
+        <input formControlName="name">
+        <i class="user icon"></i>
+      </div>
+    </div>
+    <div class="field">
+      <label>E-Mailadresse</label>
+      <div class=" ui left icon input">
+       <input formControlName="email">
+       <i class="mail icon"></i>
+       </div>
+    </div>
+  </div>
+  <button class="ui tiny green icon button" type="submit" [disabled]="createForm.invalid">
+    <i class="right edit icon"></i> Abschicken
+  </button>
+</form>
